@@ -1,0 +1,32 @@
+name: Bug Report
+description: Report a recognition, selection, export, or web tool issue
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where did this happen?
+      options:
+        - Chrome Extension (image / paused video hover)
+        - Chrome Extension (screenshot capture)
+        - Web Tool — Image to Text
+        - Web Tool — Image to Excel
+        - Web Tool — Image to Word
+        - Web Tool — Translate Image
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: OS & Chrome Version
+      placeholder: e.g. macOS 15.1 / Chrome 131
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce & Expected Behavior
+      description: Please describe what happened (do not include private or sensitive screenshots).
+    validations:
+      required: true
